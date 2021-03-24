@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Show</title>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav">
+        <a href="/shows"> Go Back </a>
+      </nav>
+      <h1 class="title">Edit Show {{this_show.id}}</h1>
+    </header>
+    <div class="form-container">
+      {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+        <li {% if message.tags %} class="{{message.tags}}" {% endif %}>
+          {{ message }}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <form action="/shows/{{this_show.id}}/update" method="POST">
+        {% csrf_token %}
+        <div class="form-format">
+          <label for="title">Title: </label>
+          <input
+            id="title"
+            type="text"
+            name="title"
+            value="{{this_show.title}}"
+          />
+          <label for="network">Network: </label>
+          <input
+            id="network"
+            type="text"
+            name="network"
+            value="{{this_show.network}}"
+          />
+          <label for="date">Release Date</label>
+          <input id="date" type="date" name="release_date" />
+          <label for="desc">Description: </label>
+          <textarea id="desc" name="description" cols="30" rows="7">
+{{this_show.description}}</textarea
+          >
+          <button class="button" type="submit">Update</button>
+          <a class="foot-anchor" href="/shows/{{this_show.id}}">Go to Show</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

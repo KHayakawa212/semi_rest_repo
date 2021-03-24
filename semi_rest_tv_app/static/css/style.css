@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: gray;
+  padding: 70px;
+}
+/* ****HEADER**** */
+header {
+  padding: 20px;
+  /* text-align: center; */
+  background-color: gray;
+  font-size: 30px;
+  width: 100%;
+}
+.title {
+  text-align: left;
+  font-size: 70px;
+}
+.top-nav {
+  text-align: right;
+}
+.top-nav a {
+  padding: 12px 16px;
+}
+/****** Content ******/
+.row-container {
+  display: flex;
+  padding: 20px;
+  justify-content: space-evenly;
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* align-items: is for vertical alignment */
+  border: solid 2px black;
+}
+.my-col {
+  border: solid 4px blue;
+  min-width: 100px;
+  min-height: 200px;
+}
+.custom-content {
+  padding: 20px;
+}
+.custom-content p {
+  margin-top: 14px;
+}
+/****** Tables ******/
+.tab {
+  border-collapse: collapse;
+  min-width: 300px;
+}
+.tab td,
+th {
+  text-align: center;
+  border: 2px solid #1b1b1b;
+  padding: 8px 15px;
+  color: black;
+}
+.tab tr:nth-child(even) {
+  background-color: #585757;
+}
+.tab th {
+  background-color: #585757;
+}
+/****** Forms ******/
+.form-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 25px;
+}
+.button {
+  margin-top: 15px;
+  color: #1b1b1b;
+  background-color: transparent;
+  border: 2px solid #1b1b1b;
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  font-weight: bolder;
+  margin-left: 10px;
+  width: 150px;
+}
+.form-format {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 2px solid rgb(51, 51, 51);
+  border-radius: 12px;
+  width: 500px;
+  padding: 26px;
+}
+input {
+  padding: 12px;
+  margin: 8px;
+  border: 2px solid rgb(51, 51, 51);
+  border-radius: 10px;
+}
+textarea {
+  padding: 12px;
+  margin: 8px;
+  border: 2px solid rgb(51, 51, 51);
+  border-radius: 10px;
+}
+/****** Accessory ******/
+.line-break {
+  margin: 12px 0px;
+  border: 1px solid black;
+}
+.foot-anchor {
+  margin-top: 20px;
+  margin-left: 10px;
+}

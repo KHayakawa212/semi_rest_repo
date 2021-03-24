@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show details</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    /> -->
+    <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- <script src="jquery-3.6.0.js"></script> -->
+    <!-- <script src="{% static 'js/script.js' %}"></script> -->
+  </head>
+  <body>
+    <header>
+      <nav class="top-nav">
+        <a href="/shows"> Go Back </a>
+      </nav>
+      <h1 class="title">TV Show {{this_show.id}}</h1>
+    </header>
+    <div class="custom-content">
+      <p>Title: {{this_show.title}}</p>
+      <p>Network: {{this_show.network}}</p>
+      <p>Release Date: {{this_show.release_date}}</p>
+      <p>Description: {{this_show.description}}</p>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <p>Last Updated: {{this_show.updated_at}}</p>
+    <div class="foot-anchor">
+      <a href="/shows/{{this_show.id}}/edit">Edit</a> |
+      <a href="/shows/{{this_show.id}}/destroy">Delete</a>
+    </div>
+  </body>
+</html>
